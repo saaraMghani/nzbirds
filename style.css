@@ -1,0 +1,250 @@
+* {
+  font-family: 'Lato', sans-serif;
+  word-wrap: break-word;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #05998c;
+}
+
+main {
+    margin-top: 100px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #05998c;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 12px;
+    margin:3px;
+}
+
+/*a {
+}*/
+
+body {
+   min-height: 800px;
+   margin-bottom: 100px;
+}
+
+section {
+    padding: 10px;
+    min-height: 800px
+}
+
+/* 
+Right Side: Bird Display 
+*/
+
+#bird-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: fized;
+    background-color: #E4F8F0;
+    height: 100%;
+}
+
+
+/* 
+Left Side Elements
+*/
+#left-side-section {
+    position: fized;
+    background-color: #05998c;
+    float: left;
+    width: 155px;
+    height: 100%;
+    left:0;
+}
+.filter-menus {
+    background-color: white;
+    padding:5px;
+}
+
+/* 
+Conservation status dropdown 
+*/
+.conservation-status-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    font-size: 12px;
+    box-shadow: 0px 8px 16px 0px grey;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.conservation-status-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 
+Sort-By dropdown 
+*/
+.sort-by-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 130px;
+    font-size: 12px;
+    box-shadow: 0px 8px 16px 0px grey;
+    padding: 12px 16px;
+    z-index: 1;
+}
+.sort-by-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 
+Key for Conservation Status
+*/
+.conservation-status-key {
+    background-color: white;
+    padding:5px;
+}
+.status-circle-not-threatened {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #02a028
+}
+.status-circle-naturally-uncommon {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #649a31
+}
+.status-circle-relicit {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #99cb68
+}
+.status-circle-recovering {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fecc33
+}
+.status-circle-declining {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fe9a01
+}
+.status-circle-nationally-increasing {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #c26967
+}
+.status-circle-nationally-vulnerable {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #9b0000
+}
+.status-circle-nationally-endangered {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #660032
+}
+.status-circle-nationally-critical {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #320033
+}
+.status-circle-extinct {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: black
+}
+.status-circle-data-deficient {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: black
+}
+
+
+
+/* the stuff below can be used for reference */
+/*
+.imageofXYZ {
+margin: 20px;
+border: 2px solid purple;
+width: 300px;
+height: 300px;
+object-fit: cover;
+object-position: 0% 0%;
+border-radius: 100%;
+display:block;
+margin-left: auto;
+margin-right: auto;
+}
+
+figure {
+    display: inline-block;
+    margin: auto;
+    position: relative
+}
+
+figcaption {
+position: absolute;
+bottom: 30px;
+left: 125px;
+border: black;
+background-color: lavender;
+text-shadow: 2px 2px magenta;
+font-style: italic;
+padding: 10px;
+box-shadow: 0 8px 16px 4px purple;
+border-radius: 40%;
+}
+*/

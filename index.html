@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>NZ Birds: COSC203 Assignment 01</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <script defer src="nzbirds.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Birds of Aotearoa</h1>
+    </header>
+
+    <main>
+      <section id="left-side-section">
+
+        <div class="filter-menus">
+          <h2>Filter Birds</h2>
+
+        <div class="search-bar">
+            <p>Search</p>
+            <form id="search-form">
+                <input
+                  id="search-text"
+                  type="text"
+                  autocomplete="on"
+                  placeholder="search for a bird..."
+                />
+            </div>
+
+          <br/>
+
+          <div class="conservation-status-dropdown">
+            <p>Conservation Status Search<p>
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Not Threatened</a><br/>
+                <a href="#">Naturally Uncommon</a><br/>
+                <a href="#">Relicit</a><br/>
+                <a href="#">Recovering</a><br/>
+                <a href="#">Declining</a><br/>
+                <a href="#">Nationally Increasing</a><br/>
+                <a href="#">Nationally Vulnerable</a><br/>
+                <a href="#">Nationally Endangered</a><br/>
+                <a href="#">Nationally Critical</a><br/>
+                <a href="#">Extinct</a><br/>
+                <a href="#">Data Deficient</a><br/>
+            </div>
+          </div>
+
+          <div class="sort-by-dropdown">
+            <p>Sort By<p>
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Lightest to Heaviest</a><br/>
+                <a href="#">Heaviest to Lightest</a><br/>
+                <a href="#">Length (small to large)</a><br/>
+                <a href="#">Length (large to small)</a><br/>
+                <a href="#">Alphabetical</a><br/>
+                <a href="#">Conservation Status</a><br/>
+            </div>
+          </div>
+          <br/>
+
+          <div class="filter-results-button">
+            <button id="search-button" type="submit">Search</button>
+          </div>
+          <br/>
+
+          <div class="num-results">
+            <p>[insert the number of results here]</p>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="conservation-status-key">
+          <h2>Conservation Status</h2>
+          <p>
+            <span class="status-circle-not-threatened"></span> Not Threatened
+          </p>
+          <p>
+            <span class="status-circle-naturally-uncommon"></span>
+            Naturally Uncommon
+          </p>
+          <p><span class="status-circle-relicit"></span> Relicit</p>
+          <p>
+            <span class="status-circle-recovering"></span>
+            Recovering
+          </p>
+          <p><span class="status-circle-declining"></span> Declining</p>
+          <p>
+            <span class="status-circle-nationally-increasing"></span> Nationally
+            Increasing
+          </p>
+          <p>
+            <span class="status-circle-nationally-vulnerable"></span> Nationally
+            Vulnerable
+          </p>
+          <p>
+            <span class="status-circle-nationally-endangered"></span> Nationaly
+            Endangered
+          </p>
+          <p>
+            <span class="status-circle-nationally-critical"></span> Nationally
+            Critical
+          </p>
+          <p><span class="status-circle-extinct"></span> Extinct</p>
+          <p>
+            <span class="status-circle-data-deficient"></span> Data Deficient
+          </p>
+          <br />
+          <p>Conservation status from DOC website</p>
+        </div>
+      </section>
+
+
+      <section id="bird-display">
+        <p>Here Are The Birds You Have Selected:<p>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Data licennsed from Birds New Zealand [add hyperlink] for educational
+        use within the University of Otago.
+      </p>
+    </footer>
+
+  </body>
+</html>
