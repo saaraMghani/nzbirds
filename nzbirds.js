@@ -27,7 +27,7 @@ function loadAllBirds() {
         }
         return birds_array;
     }
-    fetch('/nzbird.json').then(response_callback).then(data_callback);
+    fetch(URL).then(response_callback).then(data_callback);
 }
 
 class infoCard {
@@ -235,7 +235,7 @@ function randomBirdGenerator() {
 
         return birds_array;
     }
-    fetch('/nzbird.json').then(response_callback).then(data_callback);
+    fetch(URL).then(response_callback).then(data_callback);
 
 }
 
