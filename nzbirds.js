@@ -1,4 +1,4 @@
-let URL = '/nzbird.json';
+let URL = 'nzbird.json';
 
 /* This function should load all of the birds into your bird-display */
 function loadAllBirds() {
