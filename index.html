@@ -17,6 +17,7 @@
   <body>
     <header>
       <h1>Birds of Aotearoa</h1>
+      
     </header>
 
     <main>
@@ -26,58 +27,53 @@
           <h2>Filter Birds</h2>
 
         <div class="search-bar">
-            <p>Search</p>
+            <h4>Search</h4>
             <form id="search-form">
                 <input
                   id="search-text"
                   type="text"
                   autocomplete="on"
-                  placeholder="search for a bird..."
+                  placeholder="Search for a bird..."
                 />
             </div>
 
-          <br/>
+            <h5>Conservation Status:</h5>
+            <select name = "conservation-status-select" id ="conservation-status-select">
+              <option value="All">All</option>
+              <option value="Not Threatened">Not Threatened</option>
+              <option value="Naturally Uncommon">Naturally Uncommon</option>
+              <option value="Relicit">Relicit</option>
+              <option value="Recovering">Recovering</option>
+              <option value="Declining">Declining</option>
+              <option value="Nationally Increasing">Nationally Increasing</option>
+              <option value="Nationally Vulnerable">Nationally Vulnerable</option>
+              <option value="Nationally Endangered">Nationally Endangered</option>
+              <option value="Nationally Critical">Nationally Critical</option>
+              <option value="Extinct">Extinct</option>
+              <option value="Data Deficient">Data Deficient</option>
+            </select>
 
-          <div class="conservation-status-dropdown">
-            <p>Conservation Status Search<p>
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Not Threatened</a><br/>
-                <a href="#">Naturally Uncommon</a><br/>
-                <a href="#">Relicit</a><br/>
-                <a href="#">Recovering</a><br/>
-                <a href="#">Declining</a><br/>
-                <a href="#">Nationally Increasing</a><br/>
-                <a href="#">Nationally Vulnerable</a><br/>
-                <a href="#">Nationally Endangered</a><br/>
-                <a href="#">Nationally Critical</a><br/>
-                <a href="#">Extinct</a><br/>
-                <a href="#">Data Deficient</a><br/>
-            </div>
-          </div>
+            <br/>
 
-          <div class="sort-by-dropdown">
-            <p>Sort By<p>
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Lightest to Heaviest</a><br/>
-                <a href="#">Heaviest to Lightest</a><br/>
-                <a href="#">Length (small to large)</a><br/>
-                <a href="#">Length (large to small)</a><br/>
-                <a href="#">Alphabetical</a><br/>
-                <a href="#">Conservation Status</a><br/>
-            </div>
-          </div>
-          <br/>
 
           <div class="filter-results-button">
             <button id="search-button" type="submit">Search</button>
           </div>
           <br/>
 
-          <div class="num-results">
-            <p>[insert the number of results here]</p>
+          <div class="refresh-button">
+            <button id="refresh-button" type="submit">Refresh</button>
           </div>
+
+        </div>
+
+        <br />
+
+        <div class="generate-random" >
+          <h2>Random Bird Generator</h2>
+          <p style = text-align:center>Generate a random card to learn about the birds of Aotearoa one by one!</p>
+          <button id="random-button" type="submit">Generate Random</button>
+          <br />
         </div>
 
         <br />
@@ -85,53 +81,63 @@
         <div class="conservation-status-key">
           <h2>Conservation Status</h2>
           <p>
-            <span class="status-circle-not-threatened"></span> Not Threatened
+            <span class="status-circle-not-threatened"></span> 
+            <span class="hovertext" data-hover="Not Threatened: This species is not at risk">Not Threatened</span>
           </p>
           <p>
-            <span class="status-circle-naturally-uncommon"></span>
-            Naturally Uncommon
+            <span class="status-circle-naturally-uncommon"></span> 
+            <span class="hovertext" data-hover="Naturally Uncommon: naturally small population and therefore susceptible to harmful influences.">Naturally Uncommon</span>
           </p>
-          <p><span class="status-circle-relicit"></span> Relicit</p>
+          <p>
+            <span class="status-circle-relicit"></span> 
+            <span class="hovertext" data-hover="Relicit: small population stabilised after declining.">Relicit</span>
+          </p> 
           <p>
             <span class="status-circle-recovering"></span>
-            Recovering
-          </p>
-          <p><span class="status-circle-declining"></span> Declining</p>
-          <p>
-            <span class="status-circle-nationally-increasing"></span> Nationally
-            Increasing
+            <span class="hovertext" data-hover="Recovering: population increasing after previously declining.">Recovering</span>
           </p>
           <p>
-            <span class="status-circle-nationally-vulnerable"></span> Nationally
-            Vulnerable
+            <span class="status-circle-declining"></span> 
+            <span class="hovertext" data-hover="Declining: population declining but still moderately common.">Declining</span>
           </p>
           <p>
-            <span class="status-circle-nationally-endangered"></span> Nationaly
-            Endangered
+            <span class="status-circle-nationally-increasing"></span> 
+            <span class="hovertext" data-hover="Nationally Increasing: small but increasing population still facing a risk of extinction in the medium term.">Nationally Increasing</span>
           </p>
           <p>
-            <span class="status-circle-nationally-critical"></span> Nationally
-            Critical
+            <span class="status-circle-nationally-vulnerable"></span> 
+            <span class="hovertext" data-hover="Nationally Vulnerable: facing high risk of extinction in the medium term.">Nationally Vulnerable</span>
           </p>
-          <p><span class="status-circle-extinct"></span> Extinct</p>
           <p>
-            <span class="status-circle-data-deficient"></span> Data Deficient
+            <span class="status-circle-nationally-endangered"></span> 
+            <span class="hovertext" data-hover="Nationally Endangered: facing high risk of extinction in the short term.">Nationally Endangered</span>
+          </p>
+          <p>
+            <span class="status-circle-nationally-critical"></span> 
+            <span class="hovertext" data-hover="Nationally Critical: most severely threatened, facing an immediate high risk of extinction.">Nationally Critical</span>
+          </p>
+          <p><span class="status-circle-extinct"></span> 
+            <span class="hovertext" data-hover="Extinct: this speciies unfortunately no longer exists.">Extinct</span>
+          </p>
+          <p>
+            <span class="status-circle-data-deficient"></span> 
+            <span class="hovertext" data-hover="Data Deficient: not enough data available on this speicies.">Data Deficient</span>
           </p>
           <br />
-          <p>Conservation status from DOC website</p>
+          <p>Conservation status from <a href="https://www.doc.govt.nz/nature/conservation-status/" target="_blank">DOC website</a>.</p>
         </div>
+
+      
+
       </section>
 
-
       <section id="bird-display">
-        <p>Here Are The Birds You Have Selected:<p>
-
       </section>
     </main>
 
     <footer>
       <p>
-        Data licennsed from Birds New Zealand [add hyperlink] for educational
+        Data licennsed from <a href="https://www.birdsnz.org.nz/" target=”_blank” >Birds New Zealand</a> for educational
         use within the University of Otago.
       </p>
     </footer>

@@ -33,7 +33,22 @@ h1 {
 
 h2 {
     font-size: 20px;
+    text-align: center;
 }
+
+h3 {
+}
+
+h4 {
+    font-size: 15px;
+    margin: 5px;
+}
+
+h5 {
+    font-size: 12px;
+    margin: 5px;
+}
+
 
 p {
     font-size: 12px;
@@ -44,13 +59,12 @@ p {
 }*/
 
 body {
-   min-height: 800px;
    margin-bottom: 100px;
+   background-color: #E4F8F0;
 }
 
 section {
     padding: 10px;
-    min-height: 800px
 }
 
 /* 
@@ -58,77 +72,92 @@ Right Side: Bird Display
 */
 
 #bird-display {
-    display: flex;
-    flex-direction: column;
     justify-content: left;
-    position: fized;
     background-color: #E4F8F0;
     height: 100%;
+    float: right;
+    width: 67%;
 }
 
+.birdImage {
+    display: block;
+    width: 200px;
+    margin: auto;
+    border: solid;
+}
+
+.info-card {
+background: blanchedalmond;
+margin: 10px;
+width: 210px;
+height: 400px;
+float: left;
+border: solid;
+padding: 10px;
+}
 
 /* 
 Left Side Elements
 */
 #left-side-section {
-    position: fized;
     background-color: #05998c;
     float: left;
-    width: 155px;
-    height: 100%;
-    left:0;
+    width: 23%;
+    max-width: 250px;;
 }
+
+/*
+Search button
+*/
+#search-form {
+    display: block;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#conservation-status-select {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .filter-menus {
     background-color: white;
     padding:5px;
 }
 
-/* 
-Conservation status dropdown 
+
+/*
+Search Button & Refresh Button
 */
-.conservation-status-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 100px;
-    font-size: 12px;
-    box-shadow: 0px 8px 16px 0px grey;
-    padding: 12px 16px;
-    z-index: 1;
-}
-
-.conservation-status-dropdown:hover .dropdown-content {
+#search-button, #random-button {
     display: block;
+    margin: auto;
+    width: 100%;
+    background-color: #E4F8F0;
 }
+
+#refresh-button {
+    display: block;
+    margin: auto;
+    width: 50%;
+    min-width: 75px;
+    background-color: #05998c;
+    color: white;
+}
+
+.generate-random {
+    background-color: white;
+    padding:5px;
+}
+
 
 /* 
-Sort-By dropdown 
-*/
-.sort-by-dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 130px;
-    font-size: 12px;
-    box-shadow: 0px 8px 16px 0px grey;
-    padding: 12px 16px;
-    z-index: 1;
-}
-.sort-by-dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* 
-Key for Conservation Status
+Key for Conservation Status [Circle]
 */
 .conservation-status-key {
     background-color: white;
@@ -213,6 +242,123 @@ Key for Conservation Status
 }
 
 
+/* Hover Text */
+.hovertext {
+    position: relative;
+}
+
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 1;
+    width: 140px;
+    background-color: #05998c;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px;
+  
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+  }
+  
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+
+/* 
+Key for Conservation Status [Rectangle]
+*/
+.rectangle {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: purple;
+}
+
+.rec-not-threatened {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #02a028
+}
+.rec-naturally-uncommon {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #649a31
+}
+.rec-relicit {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #99cb68
+}
+.rec-recovering {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #fecc33
+}
+.rec-declining {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #fe9a01
+}
+.rec-nationally-increasing {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #c26967
+}
+.rec-nationally-vulnerable {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #9b0000
+}
+.rec-nationally-endangered {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #660032
+}
+.rec-nationally-critical {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: #320033
+}
+.rec-extinct {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: black
+}
+.rec-data-deficient {
+    display: block;
+    height: 10px;
+    width: 100 px;
+    background-color: black
+}
+
+
+.photoCredit {
+    font-size: 10px;
+    font-style: italic;
+    float: right;
+}
+
+.primary_name {
+    text-align: center;
+}
+
 
 /* the stuff below can be used for reference */
 /*
@@ -246,5 +392,48 @@ font-style: italic;
 padding: 10px;
 box-shadow: 0 8px 16px 4px purple;
 border-radius: 40%;
+}
+*/
+/* 
+Conservation status dropdown 
+
+.conservation-status-dropdown {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#cons-dropdown-content {
+    display: none;
+    background-color: white;
+    min-width: 100px;
+    font-size: 12px;
+    box-shadow: 0px 8px 16px 0px grey;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.conservation-status-dropdown:hover #cons-dropdown-content {
+    display: block;
+}
+*/
+/* 
+Sort-By dropdown 
+
+.sort-by-dropdown {
+    display: block;
+}
+#sort-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 130px;
+    font-size: 12px;
+    box-shadow: 0px 8px 16px 0px grey;
+    padding: 12px 16px;
+    z-index: 1;
+}
+.sort-by-dropdown:hover #sort-dropdown-content {
+    display: block;
 }
 */
