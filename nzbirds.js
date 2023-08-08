@@ -1,4 +1,4 @@
-let URL = 'https://github.com/saaraMghani/nzbirds/blob/f67c100e9d0f3e762cde9d4bd8f931d702c454c2/nzbird.json';
+let URL = 'https://github.com/saaraMghani/nzbirds/blob/13793b54380716fc1766b36dd9139156fceeb556/nzbird.json';
 
 /* This function should load all of the birds into your bird-display */
 function loadAllBirds() {
@@ -163,7 +163,6 @@ function loadSearchedBird() {
 
         // search for the correct element
         let bird = '';
-        let numResults = 0;
         let displayBird = false;
 
         for (i = 0; i < birds_array.length; i++) {
@@ -222,6 +221,7 @@ function randomBirdGenerator() {
 
     function data_callback(data) {
         let birds_array = JSON.parse(data);
+        
  
         /* clear bird display */
         const myNode = document.getElementById("bird-display");
@@ -235,16 +235,10 @@ function randomBirdGenerator() {
 
         return birds_array;
     }
+
     fetch(URL).then(response_callback).then(data_callback);
 
 }
-
-
-
-
-
-
-
 
 
 // RUNNING THESE FUNCTIONS TO OPERATE THE SITE
@@ -267,5 +261,6 @@ function refreshHandler(event) {
 // Operate the Random Bird Generator
 document.querySelector("#random-button").addEventListener('click', randomGeneratorHandler);
 function randomGeneratorHandler(event) {
+    event.preventDefault();
     randomBirdGenerator()
 }
