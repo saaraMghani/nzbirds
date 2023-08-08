@@ -139,6 +139,7 @@ Search Button & Refresh Button
     margin: auto;
     width: 100%;
     background-color: #E4F8F0;
+    color: black;
 }
 
 #refresh-button {
