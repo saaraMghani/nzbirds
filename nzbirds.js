@@ -1,4 +1,4 @@
-let URL = 'https://github.com/saaraMghani/nzbirds/blob/13793b54380716fc1766b36dd9139156fceeb556/nzbird.json';
+let URL = 'nzbird.json';
 
 /* This function should load all of the birds into your bird-display */
 function loadAllBirds() {
